@@ -26,7 +26,7 @@ $sql = "INSERT INTO patients (id,Full_Name,Date_Of_Birth,Phone_Number,Gender,Ema
        VALUES ('$id','$name','$date','$phone','$gender','$email','$address')";
  if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
-        header("Location :index.html");
+        header('Location:index.php');
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

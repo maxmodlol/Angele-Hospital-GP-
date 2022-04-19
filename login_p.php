@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -14,7 +15,7 @@ if ($conn->connect_error) {
 
 if (isset($_POST['user']) && $_POST['user'] && isset($_POST['pass_confirmation']) && $_POST['pass_confirmation']) {
  
-$sql = "SELECT username,password FROM access_system";
+$sql = "SELECT * FROM access_system";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -22,13 +23,36 @@ if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_assoc($result)) {
     if($row["username"]==$_POST['user'] && $row["password"]==$_POST['pass_confirmation']){
 
+      $_SESSION['username']=$row['username'];
         echo json_encode(array('success' => 1));
-        header('Location:index.html');
+        echo $row["user_level"];
+        if($row["user_level"]==="1"){
+        header('Location:index.php');
+        }
 
+        if($row["user_level"]==="2"){
+          header('Location:doctor-home.php');
+          }
+          if($row["user_level"]==="3"){
+            header('Location:patient-home.php');
+            }
+            if($row["user_level"]==="4"){
+              header('Location:lab.php');
+              }
+              if($row["user_level"]==="5"){
+                header('Location:admin.php');
+                }
+          else{
+            echo"";
+          }
+
+    }
+    else{
 
     }
   }
-} else {
+}
+ else {
   echo "0 results";
 }
 

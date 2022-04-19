@@ -28,7 +28,7 @@ $sql = "INSERT INTO appointments (Patient_ID,Patient_Name,Doctor_Name,Department
        VALUES ('$patient_id','$name','$doctor_name','$department','$date','$time','$problem')";
  if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
-        header("Location:index.html");
+        header("Location:index.php");
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

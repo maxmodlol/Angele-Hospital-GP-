@@ -43,6 +43,8 @@ $sql = "INSERT INTO payments (Patiend_ID,Patient_Name,Doctor_Name,Department,Ins
        VALUES ('$patient_id','$patient_name','$doctor_name','$department','$insurance_availabe','$servicecost','$servicename','$date')";
  if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
+        header('Location:index.php');
+
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

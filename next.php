@@ -41,24 +41,10 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a></div>
+				<a href="index.php"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
+			</div>
 			<ul class="list-unstyled components">
-				<li>
-					<a href="#nav-dashboard" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-home"></span> Dashboard
-					</a>
-					<ul class="collapse list-unstyled" id="nav-dashboard">
-						<li>
-							<a href="index.html">Vertical</a>
-						</li>
-						<li>
-							<a href="../Vertical-RTL/index.html">Vertical RTL</a>
-						</li>
-						<li>
-							<a href="../Horizontal/index.html">Horizantal</a>
-						</li>
-					</ul>
-				</li>
+
 				<li>
 					<a href="#nav-patients" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-wheelchair"></span> Patients
@@ -70,12 +56,7 @@
 						<li>
 							<a href="patients.php">All Patients</a>
 						</li>
-						<li>
-							<a href="about-patient.php">Patient Details</a>
-						</li>
-						<li>
-							<a href="edit-patient.php">Edit Patient</a>
-						</li>
+					
 					</ul>
 				</li>
 				<li>
@@ -89,193 +70,43 @@
 						<li>
 							<a href="doctors.php">All Doctors</a>
 						</li>
-						<li>
-							<a href="about-doctor.php">Doctor Details</a>
-						</li>
-						<li>
-							<a href="edit-doctor.php">Edit Doctor</a>
-						</li>
+						
 					</ul>
 				</li>
-				<li class="active">
-					<a href="#nav-appointment" data-toggle="collapse" aria-expanded="true">
+				<li>
+					<a href="#nav-appointment" data-toggle="collapse" aria-expanded="false">
 						<span class="ti-pencil-alt"></span> Appointments
 					</a>
-					<ul class="collapse list-unstyled show" id="nav-appointment">
+					<ul class="collapse list-unstyled" id="nav-appointment">
 						<li>
-							<a href="add-appointment.html">Add Appointment</a>
+							<a href="add-appointment.php">Add Appointment</a>
 						</li>
 						<li>
-							<a href="appointments.html">All Appointments</a>
+							<a href="appointments.php">All Appointments</a>
 						</li>
-						<li>
-							<a href="about-appointment.html">Appointment Details</a>
-						</li>
-						<li>
-							<a href="edit-appointment.html">Edit Appointment</a>
-						</li>
+						
 					</ul>
 				</li>
 				<li>
-						<a href="#nav-payment" data-toggle="collapse" aria-expanded="false">
-							<span class="ti-money"></span> Payments
-						</a>
-						<ul class="collapse list-unstyled" id="nav-payment">
-							<li>
-								<a href="add-payment.html">Add Payment</a>
-							</li>
-							<li>
-								<a href="payments.html">All Payments</a>
-							</li>
-							<li>
-								<a href="about-payment.html">Payment Invoice</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-							<a href="#nav-rooms" data-toggle="collapse" aria-expanded="false">
-								<span class="ti-key"></span> Room Allotments
-							</a>
-							<ul class="collapse list-unstyled" id="nav-rooms">
-								<li>
-									<a href="add-room.html">Add Room Allotment</a>
-								</li>
-								<li>
-									<a href="rooms.html">All Rooms</a>
-								</li>
-								<li>
-									<a href="edit-room.html">Edit Room Allotment</a>
-								</li>
-							</ul>
-						</li>
-				<li class="nav-level-one">
-					<a href="#nav-uiKit" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-layout-tab"></span> UI Kit
+					<a href="#nav-payment" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-money"></span> Payments
 					</a>
-					<ul class="list-unstyled collapse" aria-expanded="true" id="nav-uiKit">
+					<ul class="collapse list-unstyled" id="nav-payment">
 						<li>
-							<a href="typography.html">Typography</a>
+							<a href="add-payment.html">Add Payment</a>
 						</li>
 						<li>
-							<a href="buttons.html">Buttons</a>
+							<a href="payments.php">All Payments</a>
 						</li>
-						<li>
-							<a href="cards.html">Cards</a>
-						</li>
-						<li>
-							<a href="tabs.html">Tabs</a>
-						</li>
-						<li>
-							<a href="accordions.html">Accordions</a>
-						</li>
-						<li>
-							<a href="modals.html">Modals</a>
-						</li>
-						<li>
-							<a href="lists.html">Lists &amp; Media Object</a>
-						</li>
-						<li>
-							<a href="grid.html">Grid</a>
-						</li>
-						<li>
-							<a href="progress-bars.html">Progress Bars</a>
-						</li>
-						<li>
-							<a href="notifications-alerts.html">Notifications &amp; Alerts</a>
-						</li>
-						<li>
-							<a href="pagination.html">Pagination</a>
-						</li>
-						<li>
-							<a href="carousel.html">Carousel</a>
-						</li>
+					
 					</ul>
 				</li>
-				<li>
-					<a href="tables.html">
-						<span class="ti-layout-menu-v"></span> Tables
-					</a>
-				</li>
-				<li>
-					<a href="#nav-charts" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-pie-chart"></span> Charts
-					</a>
-					<ul class="collapse list-unstyled" id="nav-charts">
-						<li>
-							<a href="charts-1.html">Morris</a>
-						</li>
-						<li>
-							<a href="charts-2.html">Flot</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#nav-maps" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-location-pin"></span> Maps
-					</a>
-					<ul class="collapse list-unstyled" id="nav-maps">
-						<li>
-							<a href="map-1.html">Google Maps</a>
-						</li>
-						<li>
-							<a href="map-2.html">Vector Maps</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="forms.html">
-						<span class="ti-layout-media-overlay-alt-2"></span> Forms
-					</a>
-				</li>
-				<li>
-					<a href="#nav-icons" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-themify-favicon"></span> icons
-					</a>
-					<ul class="collapse list-unstyled" id="nav-icons">
-						<li>
-							<a href="font-awesome.html">Font Awesome </a>
-						</li>
-						<li>
-							<a href="themify.html">Themify</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#nav-pages" data-toggle="collapse" aria-expanded="false">
-						<span class="ti-file"></span> Other Pages
-					</a>
-					<ul class="collapse list-unstyled" id="nav-pages">
-						<li>
-							<a href="login.php">Login </a>
-						</li>
-						<li>
-							<a href="sign-up.html">Sign Up</a>
-						</li>
-						<li>
-							<a href="404.html">404</a>
-						</li>
-						<li>
-							<a href="blank-page.html">Blank Page</a>
-						</li>
-						<li>
-							<a href="pricing.html">Pricing</a>
-						</li>
-						<li>
-							<a href="faq.html">FAQ</a>
-						</li>
-						<li>
-							<a href="invoice.html">Invoice</a>
-						</li>
-						<li>
-							<a href="blank-page.html">Coming Soon</a>
-						</li>
-					</ul>
-				</li>
+
 			</ul>
 			<div class="nav-help animated fadeIn">
 				<h5><span class="ti-comments"></span> Need Help</h5>
 				<h6>
-					<span class="ti-mobile"></span> +1 1234 567 890</h6>
+					<span class="ti-mobile"></span> +972 000000</h6>
 				<h6>
 					<span class="ti-email"></span> email@site.com</h6>
 				<p class="copyright-text">Copy rights &copy; 2018</p>
@@ -288,7 +119,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -366,7 +197,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">						
 						<li class="breadcrumb-item">
-							<a href="index.html">
+							<a href="index.php">
 								<span class="ti-home"></span>
 							</a>
                         </li>
@@ -429,15 +260,20 @@
             $timenext=(int)$timestart+1;
 
             if((int)$timenext<12){
-            array_push($time_availabe,"$timestart: AM - $timenext AM ");
+            array_push($time_availabe,"$timestart:00AM-$timestart:20AM ");
+			array_push($time_availabe,"$timestart:20AM-$timestart:40AM ");
+            array_push($time_availabe,"$timestart:40AM-$timenext:00AM ");
+
             }
             if((int)$timestart>11){
-                array_push($time_availabe,"$timestart PM - $timenext PM ");
-            }
+				array_push($time_availabe,"$timestart:00PM-$timestart:20PM ");
+				array_push($time_availabe,"$timestart:20PM-$timestart:40PM ");
+				array_push($time_availabe,"$timestart:40PM-$timenext:00PM ");            }
             else{
                 if((int)$timenext>11 && (int)$timestart<12){
-                array_push($time_availabe,"$timestart AM - $timenext PM ");
-            }
+					array_push($time_availabe,"$timestart:00AM-$timestart:20AM ");
+					array_push($time_availabe,"$timestart:20AM-$timestart:40AM ");
+					array_push($time_availabe,"$timestart:40AM-$timenext:00AM ");            }
 
             }
             $timestart=(int)$timestart+1;
@@ -463,41 +299,38 @@
             }
 
        $conn->close();
-       for ($x = 0; $x <count($time_availabe); $x++) { 
+	   $new = array();
 
-        if(count($time_conflict)>0){
+       for ($x = 0; $x <count($time_availabe); $x++) {
          for ($y = 0; $y <count($time_conflict); $y++) { 
-            if(strcmp($time_availabe[$x],$time_conflict[$y])){
-
-                unset($time_availabe[$x]);
-                $y=$y+1;
-                
-
-
+            if(strcmp($time_availabe[$x],$time_conflict[$y])==1){
+				$x++;
             }
             else{
+
+
+				
              
             }
          }
-      }
-      else{
+		 array_push($new,$time_availabe[$x]);
 
       }
+	 
+	 
   
-    }
-
-    $new = array();
-    $new = array_values($time_availabe);
     
-      
+
+
+    
 
      
   echo"  <div class='form-group col-md-6'>
     <label for='time-slot'>Avaialbe Time Slot</label>
     <select class='form-control' id='time-slot' name='appointment-time'>";
-    for ($y = 0; $y < count($new); $y++) { 
+    for ($Z = 0; $Z < count($new); $Z++) { 
         echo "<option>";
-      echo   $new[$y];
+      echo   $new[$Z];
          echo "</option>";
         }
 

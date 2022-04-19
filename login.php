@@ -19,32 +19,7 @@
 	<link rel="stylesheet" href="css/responsive.css">
 
 	<script src="js/modernizr.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#loginformm').submit(function(e) {
-				e.preventDefault();
-				$.ajax({
-					type: "POST",
-					url: 'login_p.php',
-					data: $(this).serialize(),
-					success: function(response)
-					{
-						var jsonData = JSON.parse(response);
-
-						// user is logged in successfully in the back-end
-						// let's redirect
-						if (jsonData.success == "1")
-						{
-							location.href = 'index.html';
-						}
-						else
-						{
-							alert('Invalid Credentials!');
-						}
-					}
-				});
-			});
-		});
+	
 	</script>
 
 </head>

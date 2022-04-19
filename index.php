@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html>
 
@@ -43,7 +44,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index.html"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 
@@ -117,71 +118,22 @@
 		<!-- /Sidebar -->
 		<!-- Page Content -->
 		<div id="content">
-			<!-- Top Navigation -->
-			<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<span class="ti-menu" id="sidebarCollapse"></span>
-						</li>
-						<li class="nav-item">
-							<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
-						</li>
-						<li class="nav-item">
-							<a  data-toggle="modal" data-target=".proclinic-modal-lg">
-								<span class="ti-search"></span>
-							</a>
-							<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lorvens">
-									<div class="modal-content proclinic-box-shadow2">
-										<div class="modal-header">
-											<h5 class="modal-title">Search Patient/Doctor:</h5>
-											<span class="ti-close" data-dismiss="modal" aria-label="Close">
-											</span>
-										</div>
-										<div class="modal-body">
-											<form>
-												<div class="form-group">
-													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
-													<button type="button" class="btn btn-lorvens proclinic-bg">
-														<span class="ti-location-arrow"></span> Search</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								<span class="ti-announcement"></span>
-							</a>
-							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
-								<h5>Notifications</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-money"></span> Patient payment done</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-time"></span>Patient Appointment booked</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-							</div>
-						</li>
+		
 						<li class="nav-item">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								<span class="ti-user"></span>
 							</a>
 							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
-								<h5>John Willing</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-settings"></span> Settings</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-help-alt"></span> Help</a>
-								<a class="dropdown-item" href="#">
+								<h5><?php echo $_SESSION['username'] ;?>
+                                </h5>
+							
+								<a class="dropdown-item" href="login.php">
 									<span class="ti-power-off"></span> Logout</a>
 							</div>
 						</li>
@@ -199,7 +151,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item">
-							<a href="index.html">
+							<a href="index.php">
 								<span class="ti-home"></span>
 							</a>
 						</li>
@@ -278,153 +230,7 @@
 					<!-- /Widget Item -->
 				</div>
 
-				<div class="row">
-					<!-- Widget Item -->
-					<div class="col-md-12">
-						<div class="widget-area-2 proclinic-box-shadow">
-							<h3 class="widget-title">Appointments</h3>
-							<div class="table-responsive">
-								<table class="table table-bordered table-striped">
-									<thead>
-										<tr>
-											<th>Patient Name</th>
-											<th>Doctor</th>
-											<th>Check-Up</th>
-											<th>Date</th>
-											<th>Time</th>
-											<th>Status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Rajesh</td>
-											<td>Manoj Kumar</td>
-											<td>Dental</td>
-											<td>12-10-2018</td>
-											<td>12:10PM</td>
-											<td>
-												<span class="badge badge-success">Completed</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Riya</td>
-											<td>Daniel </td>
-											<td>Ortho</td>
-											<td>12-10-2018</td>
-											<td>1:10PM</td>
-											<td>
-												<span class="badge badge-warning">Pending</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Siri</td>
-											<td>Daniel </td>
-											<td>Ortho</td>
-											<td>12-10-2018</td>
-											<td>1:30PM</td>
-											<td>
-												<span class="badge badge-danger">Cancelled</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Rajesh</td>
-											<td>Manoj Kumar</td>
-											<td>Dental</td>
-											<td>12-10-2018</td>
-											<td>12:10PM</td>
-											<td>
-												<span class="badge badge-success">Completed</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Riya</td>
-											<td>Daniel </td>
-											<td>Ortho</td>
-											<td>12-10-2018</td>
-											<td>1:10PM</td>
-											<td>
-												<span class="badge badge-warning">Pending</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Siri</td>
-											<td>Daniel </td>
-											<td>Ortho</td>
-											<td>12-10-2018</td>
-											<td>1:30PM</td>
-											<td>
-												<span class="badge badge-danger">Cancelled</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<!-- /Widget Item -->
-				</div>
-
-				<div class="row">
-					<!-- Widget Item -->
-					<div class="col-sm-6">
-						<div class="widget-area-2 proclinic-box-shadow">
-							<h3 class="widget-title">Appointments Status</h3>
-							<div id="donutMorris" class="chart-home"></div>
-						</div>
-					</div>
-					<!-- /Widget Item -->
-					<!-- Widget Item -->
-					<div class="col-md-6">
-						<div class="widget-area-2 progress-status proclinic-box-shadow">
-							<h3 class="widget-title">Doctors Availability</h3>
-							<div class="table-responsive">
-								<table class="table table-bordered">
-									<thead>
-										<tr>
-											<th>Doctor</th>
-											<th>Speciality</th>
-											<th>Availability</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Rajesh</td>
-											<td>Dental</td>
-											<td>
-												<span class="badge badge-success">Available</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Riya</td>
-											<td>Ortho</td>
-											<td>
-												<span class="badge badge-warning">On Leave</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Siri</td>
-											<td>Skin</td>
-											<td>
-												<span class="badge badge-danger">Not Available</span>
-											</td>
-										</tr>
-										<tr>
-											<td>Rajesh</td>
-											<td>Dental</td>
-											<td>
-												<span class="badge badge-success">Available</span>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-						</div>
-					</div>
-					<!-- /Widget Item -->
-
-				</div>
-
+		
 			</div>
 			<!-- /Main Content -->
 		</div>

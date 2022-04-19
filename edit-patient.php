@@ -42,7 +42,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index.html"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 
@@ -120,7 +120,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -198,7 +198,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">						
 						<li class="breadcrumb-item">
-							<a href="index.html">
+							<a href="index.php">
 								<span class="ti-home"></span>
 							</a>
                         </li>
@@ -228,7 +228,7 @@
                                                         					data: $(this).serialize(),
                                                         					success: function(response)
                                                         					{
-                                                        				        location.href = 'index.html';
+                                                        				        location.href = 'index.php';
 
 
                                                         					}

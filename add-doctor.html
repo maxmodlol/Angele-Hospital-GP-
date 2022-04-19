@@ -41,7 +41,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index.html"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 
@@ -119,7 +119,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -197,7 +197,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">						
 						<li class="breadcrumb-item">
-							<a href="index.html">
+							<a href="index.php">
 								<span class="ti-home"></span>
 							</a>
                         </li>
@@ -228,14 +228,19 @@
 										<label for="dob">Date Of Birth</label>
 										<input type="date" placeholder="Date of Birth" class="form-control" id="dob" name="dob">
                                     </div>
-                                    <div class="form-group col-md-6">
-										<label for="specialization">Specialization</label>
-										<input type="text" placeholder="Specialization" class="form-control" id="specialization" name="specialzation">
-									</div>
+									<div class="form-group col-md-6">
+										<label for="about-doctor">Username</label>
+										<input type="text" placeholder="Username" class="form-control" id="about-doctor" rows="3" name="username">
+                                    </div>
 									<div class="form-group col-md-6">
 										<label for="password">Password</label>
 										<input type="text" placeholder="" class="form-control" id="password" name="password">
 									</div>
+                                    <div class="form-group col-md-6">
+										<label for="specialization">Specialization</label>
+										<input type="text" placeholder="Specialization" class="form-control" id="specialization" name="specialzation">
+									</div>
+								
 									<div class="form-group col-md-6">
 										<label for="phone">Phone</label>
 										<input type="text" placeholder="Phone" class="form-control" id="phone" name="phone">
@@ -252,10 +257,7 @@
 											<option>Other</option>
 										</select>
 									</div>
-									<div class="form-group col-md-6">
-										<label for="about-doctor">Doctor Details</label>
-										<textarea placeholder="Doctor Details" class="form-control" id="about-doctor" rows="3" name="doctor_details"></textarea>
-                                    </div>
+								
                                     <div class="form-group col-md-6">
 										<label for="address">Address</label>
 										<textarea placeholder="Address" class="form-control" id="address" rows="3" name="address"></textarea>
@@ -299,7 +301,7 @@
 											success: function()
 											{
 
-												location.href = 'index.html';
+												location.href = 'index.php';
 
 											},
 											data: $(this).serialize()

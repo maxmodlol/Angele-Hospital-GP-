@@ -46,7 +46,7 @@
 		<!-- Sidebar -->
 		<nav id="sidebar" class="proclinic-bg">
 			<div class="sidebar-header">
-				<a href="index.html"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="logo" width="200px" style="border-radius: 50%" alt="logo"></a>
 			</div>
 			<ul class="list-unstyled components">
 
@@ -124,7 +124,7 @@
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
-						<a href="index.html"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
+						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
@@ -202,7 +202,7 @@
 				<div class="col-md-6">
 					<ol class="breadcrumb">						
 						<li class="breadcrumb-item">
-							<a href="index.html">
+							<a href="index.php">
 								<span class="ti-home"></span>
 							</a>
                         </li>
@@ -236,8 +236,7 @@
 											<th>Patient Name</th>
 											<th>Date_Of_Birth</th>
 											<th>Phone</th>
-											<th>last Visit</th>
-											<th>Status</th>
+											<th>Gender</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -271,8 +270,8 @@
                                                     echo"<td  ><a  id='name' href='about-patient.php?name={$fullname}' >".$row['Full_Name']."</a>";
                                                   echo"<td id='dob'>".$row["Date_Of_Birth"]."</td>";
                                                     echo"<td id='p_n'>".$row["Phone_Number"]."</td>";
-                                                    echo"<td>12-03-2018</td>" ;
-                                                   echo "<td><span class='badge badge-success'>Completed</span></td>";
+													echo"<td id='p_n'>".$row["Gender"]."</td>";
+
                                                     echo"	</tr>";
                                                  }
                                                }
@@ -310,9 +309,7 @@
 										</li>
 									</ul>
 								</nav>
-								<!-- /Export links-->
-								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
-								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+							
 							</div>
 						</div>
 					</div>

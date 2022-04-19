@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 $id= $_SESSION['id'];
 $sql = "DELETE FROM appointments  WHERE Patient_ID ='$id'";
  if (mysqli_query($conn, $sql)) {
-        header("Location:index.html");
+        header("Location:index.php");
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

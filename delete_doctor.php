@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 $name= $_SESSION['name'];
 $sql = "DELETE FROM doctors  WHERE Full_Name ='$name'";
  if (mysqli_query($conn, $sql)) {
-        header("Location:index.html");
+        header("Location:index.php");
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);
