@@ -186,7 +186,7 @@ form .row>[class^=col] {
 ul ul a {
 	font-size: 0.9em;
 	padding-left: 30px !important;
-	background: #666666;
+	background: #778da9;
 }
 .proclinic-box-shadow {
 	border-radius: 0;
@@ -1252,7 +1252,7 @@ form .form-group label{
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 	padding: 5px 20px;
-    background: #666666;
+    background: #778da9;
 }
 .no-margin-padding [class*="col-"], .no-mp [class*="col-"]{
     padding-right: 0px;
