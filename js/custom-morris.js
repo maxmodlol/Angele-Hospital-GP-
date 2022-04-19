@@ -5,16 +5,15 @@
     element: 'lineMorris',
     resize: true,
     data: [
-      { y: '2016 Q1', Appointments: 20 },
-      { y: '2016 Q2', Appointments: 15 },
-      { y: '2016 Q3', Appointments: 34 },
-      { y: '2016 Q4', Appointments: 7 },
-      { y: '2017 Q1', Appointments: 31 },
-      { y: '2017 Q2', Appointments: 18 },
-      { y: '2017 Q3', Appointments: 70 },
-      { y: '2017 Q4', Appointments: 32 },
-      { y: '2018 Q1', Appointments: 15 },
-      { y: '2018 Q2', Appointments: 53 }
+      { y: '2018 Q1', Appointments: 20 },
+      { y: '2019 Q2', Appointments: 15 },
+      { y: '2020 Q3', Appointments: 34 },
+      { y: '2021 Q4', Appointments: 7 },
+      { y: '2019 Q2', Appointments: 18 },
+      { y: '2020 Q3', Appointments: 70 },
+      { y: '2021 Q4', Appointments: 32 },
+      { y: '2020 Q1', Appointments: 15 },
+      { y: '2021 Q2', Appointments: 53 }
     ],
     xkey: 'y',
     ykeys: ['Appointments'],
@@ -31,25 +30,25 @@
   var chart = Morris.Bar({
     element: 'barMorris',
     data: [{
-      y: '2012',
+      y: '2015',
       a: 20
     }, {
-      y: '2013',
+      y: '2016',
       a: 45
     }, {
-      y: '2014',
+      y: '2017',
       a: 56
     }, {
-      y: '2015',
+      y: '2018',
       a: 35
     }, {
-      y: '2016',
+      y: '2019',
       a: 18
     }, {
-      y: '2017',
+      y: '2020',
       a: 28
     }, {
-      y: '2018',
+      y: '2021',
       a: 20
     }],
     xkey: 'y',
