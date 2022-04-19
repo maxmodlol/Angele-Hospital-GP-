@@ -31,6 +31,8 @@ $sql = "UPDATE doctors
         ,Duty_Time='$duty_time',Department='$department',email='$email' ,password='$password'
         WHERE Full_Name = '$name'";
 $result = mysqli_query($conn, $sql);
+header('Location:index.php');
+
 
     echo $result;
     echo $name;

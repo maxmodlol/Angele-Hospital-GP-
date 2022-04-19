@@ -160,36 +160,36 @@ session_start();
 						<div class="widget-area-2 proclinic-box-shadow">
 							<h3 class="widget-title">Add Uraine Analysis</h3>
 
-							<form method='post' id="form">
+							<form method='post' id="form" action='stool_rep.php'>
 								<div class="form-row">
                                     <div class="form-group col-md-6">
 										<label for="specialization">Patiend ID</label>
-										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id">
+										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="Doctor-name">Color</label>
-										<input type="text" class="form-control" placeholder="" id="Doctor-name" name="color">
+										<input type="text" class="form-control" placeholder="" id="Doctor-name" name="color" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="dob">Constancy</label>
-										<input type="text" placeholder="" class="form-control" id="dob" name="Constancy">
+										<input type="text" placeholder="" class="form-control" id="dob" name="Constancy" required>
                                     </div>
 									<div class="form-group col-md-6">
 										<label for="about-doctor">Groos Blood</label>
-										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="groos_blood">
+										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="groos_blood" required>
                                     </div>
 									<div class="form-group col-md-6">
 										<label for="password">Mucus</label>
-										<input type="text" placeholder="" class="form-control" id="password" name="mucus">
+										<input type="text" placeholder="" class="form-control" id="password" name="mucus" required>
 									</div>
                                     <div class="form-group col-md-6">
 										<label for="specialization">Occult Blood</label>
-										<input type="text" placeholder="" class="form-control" id="specialization" name="occult_blood">
+										<input type="text" placeholder="" class="form-control" id="specialization" name="occult_blood" required>
 									</div>
 								
 									<div class="form-group col-md-6">
 										<label for="phone">Pus</label>
-										<input type="text" placeholder="" class="form-control" id="phone" name="pus">
+										<input type="text" placeholder="" class="form-control" id="phone" name="pus" required>
 									</div>
 												
 									<div class="form-check col-md-12 mb-2">
@@ -206,37 +206,7 @@ session_start();
 								</div>
 							</form>
 
-							<script type="text/javascript">
-								$(document).ready(function() {
-									$('#form').submit(function(e) {
-										e.preventDefault();
-										$.ajax({
-											type: "POST",
-											url: 'stool_rep.php',
-											success: function()
-											{
-
-												location.href = 'lab.php';
-
-											},
-											data: $(this).serialize()
-										});
-									});
-								});
-							</script>
-							<!-- Alerts-->
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Successfully Done!</strong> Please Check in doctors list
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
+						
 							<!-- /Alerts-->
 						</div>
 					</div>

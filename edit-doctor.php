@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -117,71 +118,23 @@
 		<!-- Page Content -->
 		<div id="content">
 			<!-- Top Navigation -->
+			<!-- Top Navigation -->
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
 						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<span class="ti-menu" id="sidebarCollapse"></span>
-						</li>
-						<li class="nav-item">
-							<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
-						</li>
-						<li class="nav-item">
-							<a  data-toggle="modal" data-target=".proclinic-modal-lg">
-								<span class="ti-search"></span>
-							</a>
-
-							<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lorvens">
-									<div class="modal-content proclinic-box-shadow2">
-										<div class="modal-header">
-											<h5 class="modal-title">Search Patient/Doctor:</h5>
-											<span class="ti-close" data-dismiss="modal" aria-label="Close">
-											</span>
-										</div>
-										<div class="modal-body">
-											<form>
-												<div class="form-group">
-													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
-													<button type="button" class="btn btn-lorvens proclinic-bg">
-														<span class="ti-location-arrow"></span> Search</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								<span class="ti-announcement"></span>
-							</a>
-							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
-								<h5>Notifications</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-money"></span> Patient payment done</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-time"></span>Patient Appointment booked</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-							</div>
-						</li>
+		
 						<li class="nav-item">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								<span class="ti-user"></span>
 							</a>
 							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
-								<h5>John Willing</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-settings"></span> Settings</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-help-alt"></span> Help</a>
-								<a class="dropdown-item" href="#">
+								<h5><?php echo $_SESSION['username'] ;?>
+                                </h5>
+							
+								<a class="dropdown-item" href="login.php">
 									<span class="ti-power-off"></span> Logout</a>
 							</div>
 						</li>
@@ -219,23 +172,6 @@
 					<div class="col-md-12">
 						<div class="widget-area-2 proclinic-box-shadow">
 							<h3 class="widget-title">Edit Doctor</h3>
-							<script type="text/javascript">
-                                                                                                                	$(document).ready(function() {
-                                                                                                                                            			$('#formm').submit(function(e) {
-                                                                                                                                           			e.preventDefault();
-                                                                                                                                            				$.ajax({
-                                                                                                                                            					type: 'POST',
-                                                                                                                                            					url: 'editdoctor.php',
-                                                                                                                                            					data: $(this).serialize(),
-                                                                                                                                            					success: function(response)
-                                                                                                                                            					{
-                                                                                                                                            				        location.href = 'index.php';
-
-                                                                                                                                            					}
-                                                                                                                                            				});
-                                                                                                                                            			});
-                                                                                                                                            		});
-                                                                                                                                            </script>
 							<?php
                             							$servername = "localhost";
                                                                                                       $username = "root";
@@ -264,31 +200,31 @@
 
 
                                echo"
-								<form method='post' id='formm'>
+								<form method='post' id='formm' action='editdoctor.php'>
                             								<div class='form-row'>
                             									<div class='form-group col-md-6'>
                             										<label for='Doctor-name'>Doctor Name</label>
-                            										<input type='text' class='form-control'value='{$namee}' placeholder='Doctor name' id='Doctor-name' name='doctor_name'>
+                            										<input type='text' class='form-control'value='{$namee}' placeholder='Doctor name' id='Doctor-name' name='doctor_name' required>
                             									</div>
                             									<div class='form-group col-md-6'>
                             										<label for='dob'>Date Of Birth</label>
-                            										<input type='date' placeholder='Date of Birth' value='{$dob}' class='form-control' id='dob' name='dob'>
+                            										<input type='date' placeholder='Date of Birth' value='{$dob}' class='form-control' id='dob' name='dob' required>
                                                                 </div>
                                                                 <div class='form-group col-md-6'>
                             										<label for='specialization'>Specialization</label>
-                            										<input type='text' placeholder='Specialization' class='form-control' value='{$specialzation}' id='specialization' name='specialzation'>
+                            										<input type='text' placeholder='Specialization' class='form-control' value='{$specialzation}' id='specialization' name='specialzation' required>
                             									</div>
                             									<div class='form-group col-md-6'>
                             										<label for='password'>Password</label>
-                            										<input type='password' value='{$password}' placeholder='' class='form-control' id='password' name='password'>
+                            										<input type='password' value='{$password}' placeholder='' class='form-control' id='password' name='password' required>
                             									</div>
                             									<div class='form-group col-md-6'>
                             										<label for='phone'>Phone</label>
-                            										<input type='text' placeholder='Phone' value='{$phone}' class='form-control' id='phone' name='phone'>
+                            										<input type='tel' placeholder='Phone' value='{$phone}' class='form-control' id='phone' name='phone' required>
                             									</div>
                             									<div class='form-group col-md-6'>
                             										<label for='email'>Email</label>
-                            										<input type='email' value='{$email}' placeholder='email' class='form-control' id='Email' name='email'>
+                            										<input type='email' value='{$email}' placeholder='email' class='form-control' id='Email' name='email' required>
                             									</div>
                             									<div class='form-group col-md-6'>
                             										<label for='gender'>Gender</label>
@@ -316,9 +252,19 @@
                             									<div class='form-group col-md-6'>
                             										<label for='department'>Department</label>
                             										<select class='form-control' value='{$department}' id='department' name='department'>
-                            											<option>Neuro</option>
-                            											<option>Ortho</option>
-                            											<option>General</option>
+																	<option>Neurosurgery</option>
+																	<option>Pediatrics</option>
+																	<option>Children's Surgery</option>
+																	<option>Orthopedic surgery</option>
+																	<option>General Surgery</option>
+																	<option>Prosthetics Specialist</option>
+																	<option>Urological Surgery</option>
+																	<option>Oncology and breast surgery</option>
+																	<option>Specialist in brain and neurology, movement and tremors</option>
+																	<option>Pediatric respiratory and pulmonary endoscopy clinic</option>
+																	<option>Endocrinology and diabetes specialist</option>
+																	<option>EEG and EMG Clinic</option>
+																	<option>TCD Clinic</option>
                             										</select>
                             									</div>
                             									<div class='form-check col-md-12 mb-2'>

@@ -197,13 +197,13 @@
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="patient-id">Patient ID</label>
-										<input type="text" class="form-control" placeholder="Patient ID" id="patient-id">
+										<input type="text" class="form-control" placeholder="Patient ID" id="patient-id" required>
 									</div>
 									<div class="form-group col-md-6">
     
     
 									<label for="appointment-date">Appointment Date</label>
-  								  <input type="date" placeholder="Appointment Date" class="form-control" id="appointment-date">	
+  								  <input type="date" placeholder="Appointment Date" class="form-control" id="appointment-date" required>	
 									</div>
 									<div class="form-group col-md-6">
 										<label for="doctor-name">Doctor Name</label>
@@ -254,19 +254,7 @@
 									</div>
 								</div>
 							</form>
-							<!-- Alerts-->
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Successfully Done!</strong> Appointment token Generated
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
+						
 							<!-- /Alerts-->
 						</div>
 					</div>

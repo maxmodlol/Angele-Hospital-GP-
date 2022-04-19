@@ -101,13 +101,13 @@
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="patient-id">Username</label>
-										<input type="text" class="form-control" placeholder="" id="patient-id" name='username'>
+										<input type="text" class="form-control" placeholder="" id="patient-id" name='username' required>
 									</div>
 									<div class="form-group col-md-6">
     
     
 									<label for="appointment-date">Password</label>
-  								  <input type="password" placeholder="" class="form-control" id="appointment-date" name='password'>	
+  								  <input type="password" placeholder="" class="form-control" id="appointment-date" name='password' required>	
 									</div>
 											
 									<div class="form-check col-md-12 mb-2">

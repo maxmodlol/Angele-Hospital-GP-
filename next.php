@@ -116,70 +116,23 @@
 		<!-- Page Content -->
 		<div id="content">
 			<!-- Top Navigation -->
+			<!-- Top Navigation -->
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
 						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<span class="ti-menu" id="sidebarCollapse"></span>
-						</li>
-						<li class="nav-item">
-							<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
-						</li>
-						<li class="nav-item">
-							<a  data-toggle="modal" data-target=".proclinic-modal-lg">
-								<span class="ti-search"></span>
-							</a>
-							<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lorvens">
-									<div class="modal-content proclinic-box-shadow2">
-										<div class="modal-header">
-											<h5 class="modal-title">Search Patient/Doctor:</h5>
-											<span class="ti-close" data-dismiss="modal" aria-label="Close">
-											</span>
-										</div>
-										<div class="modal-body">
-											<form>
-												<div class="form-group">
-													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
-													<button type="button" class="btn btn-lorvens proclinic-bg">
-														<span class="ti-location-arrow"></span> Search</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								<span class="ti-announcement"></span>
-							</a>
-							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
-								<h5>Notifications</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-money"></span> Patient payment done</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-time"></span>Patient Appointment booked</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-							</div>
-						</li>
+		
 						<li class="nav-item">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								<span class="ti-user"></span>
 							</a>
 							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
-								<h5>John Willing</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-settings"></span> Settings</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-help-alt"></span> Help</a>
-								<a class="dropdown-item" href="#">
+								<h5><?php echo $_SESSION['username'] ;?>
+                                </h5>
+							
+								<a class="dropdown-item" href="login.php">
 									<span class="ti-power-off"></span> Logout</a>
 							</div>
 						</li>
@@ -345,22 +298,11 @@
     </div>
     <div class="form-group col-md-6">
     <label for="patient-name">Patient Name</label>
-    <input type="text" class="form-control" id="patient-name" placeholder="Patient Name" name="patient_name" rows="3">
+    <input type="text" class="form-control" id="patient-name" placeholder="Patient Name" name="patient_name" rows="3" required>
     </div>
 							
 							<!-- Alerts-->
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Successfully Done!</strong> Appointment token Generated
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
+						
                             <div class="form-group col-md-6 mb-3">
 										<button type="submit" class="btn btn-primary btn-lg">Submit</button>
 									</div>

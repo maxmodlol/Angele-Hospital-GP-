@@ -251,13 +251,13 @@
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="patient-id">Patient ID</label>
-										<input type="text" class="form-control" placeholder="Patient ID" id="patient-id">
+										<input type="text" class="form-control" placeholder="Patient ID" id="patient-id" required>
 									</div>
 									<div class="form-group col-md-6">
     
     
 									<label for="appointment-date">Appointment Date</label>
-  								  <input type="date" placeholder="Appointment Date" class="form-control" id="appointment-date">	
+  								  <input type="date" placeholder="Appointment Date" class="form-control" id="appointment-date" required>	
 									</div>
 									<div class="form-group col-md-6">
 										<label for="doctor-name">Doctor Name</label>

@@ -155,23 +155,23 @@ session_start();
 								<div class="form-row">
                                     <div class="form-group col-md-6">
 										<label for="specialization">Patient ID</label>
-										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id">
+										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id" required >
 									</div>
 									<div class="form-group col-md-6">
 										<label for="Doctor-name">Visit_Date</label>
-										<input type="date" class="form-control" placeholder="" id="Doctor-name" name="visit_date">
+										<input type="date" class="form-control" placeholder="" id="Doctor-name" name="visit_date" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="dob">Diagnosis</label>
-										<input type="text" placeholder="" class="form-control" id="dob" name="diagnosis">
+										<input type="text" placeholder="" class="form-control" id="dob" name="diagnosis" required>
                                     </div>
 									<div class="form-group col-md-6">
 										<label for="about-doctor">Allergies</label>
-										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="allergies">
+										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="allergies" required> 
                                     </div>
                                     <div class="form-group col-md-6">
 										<label for="about-doctor1">Doctor Name</label>
-										<input type="text" placeholder="" class="form-control" id="about-doctor1" rows="3" name="doctor_name">
+										<input type="text" placeholder="" class="form-control" id="about-doctor1" rows="3" name="doctor_name" required>
                                     </div>
 									
                                    

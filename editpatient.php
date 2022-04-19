@@ -24,6 +24,7 @@ $sql = "UPDATE patients
         WHERE Full_Name = '$name'";
 $result = mysqli_query($conn, $sql);
 
+header('Location:index.php');
 
     echo "failed";
 

@@ -29,7 +29,8 @@ $sql = "INSERT INTO uraine_analysis (id,color,Apperance,leukonyce,Protin,blood,g
  if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
 
-        
+        header('Location:lab.php');
+
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

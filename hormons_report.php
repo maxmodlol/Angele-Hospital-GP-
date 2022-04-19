@@ -161,31 +161,31 @@ session_start();
 						<div class="widget-area-2 proclinic-box-shadow">
 							<h3 class="widget-title">Add Uraine Analysis</h3>
 
-							<form method='post' id="form">
+							<form method='post' id="form" action='hormons_rep.php'>
 								<div class="form-row">
                                     <div class="form-group col-md-6">
 										<label for="specialization">Patiend ID</label>
-										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id">
+										<input type="text" placeholder="Ex:45623..." class="form-control" id="specialization" name="patient_id" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="Doctor-name">T3</label>
-										<input type="text" class="form-control" placeholder="" id="Doctor-name" name="T3">
+										<input type="text" class="form-control" placeholder="" id="Doctor-name" name="T3" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="dob">T4</label>
-										<input type="text" placeholder="" class="form-control" id="dob" name="T4">
+										<input type="text" placeholder="" class="form-control" id="dob" name="T4" required>
                                     </div>
 									<div class="form-group col-md-6">
 										<label for="about-doctor">TSH</label>
-										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="TSH">
+										<input type="text" placeholder="" class="form-control" id="about-doctor" rows="3" name="TSH" required>
                                     </div>
 									<div class="form-group col-md-6">
 										<label for="password">Vitmin B12</label>
-										<input type="text" placeholder="" class="form-control" id="password" name="B12">
+										<input type="text" placeholder="" class="form-control" id="password" name="B12" required>
 									</div>
                                     <div class="form-group col-md-6">
 										<label for="specialization">25-Hydroxy Vitmin D</label>
-										<input type="text" placeholder="" class="form-control" id="specialization" name="D">
+										<input type="text" placeholder="" class="form-control" id="specialization" name="D" required>
 									</div>
 								
 									
@@ -203,37 +203,9 @@ session_start();
 								</div>
 							</form>
 
-							<script type="text/javascript">
-								$(document).ready(function() {
-									$('#form').submit(function(e) {
-										e.preventDefault();
-										$.ajax({
-											type: "POST",
-											url: 'hormons_rep.php',
-											success: function()
-											{
-
-												location.href = 'lab.php';
-
-											},
-											data: $(this).serialize()
-										});
-									});
-								});
-							</script>
+						
 							<!-- Alerts-->
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Successfully Done!</strong> Please Check in doctors list
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
+						
 							<!-- /Alerts-->
 						</div>
 					</div>

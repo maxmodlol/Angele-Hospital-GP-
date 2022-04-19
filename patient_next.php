@@ -202,7 +202,7 @@
         $time_conflict=array();
         $time_availabe=array();
         $length=abs((int)$time_split[0]-(int)$time_split[4]);
-        for ($x = 0; $x < (int)$length; $x++) {
+        for ($x = 0; $x < 6; $x++) {
             $timenext=(int)$timestart+1;
 
             if((int)$timenext<12){

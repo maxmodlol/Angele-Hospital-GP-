@@ -28,7 +28,8 @@ $sql = "INSERT INTO hormons_analysis (Patient_ID,T3,T4,TSH,Vitmin_B12,Vitmin_D)
  if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";
         
-        
+        header('Location:lab.php');
+
      }
       else {
         echo "Error: " . $sql . ":-" . mysqli_error($conn);

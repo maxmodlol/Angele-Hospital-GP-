@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -119,70 +120,23 @@
 		<!-- Page Content -->
 		<div id="content">
 			<!-- Top Navigation -->
-			<nav class="navbar navbar-default">
+				<!-- Top Navigation -->
+				<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="responsive-logo">
 						<a href="index.php"><img src="images/logo-dark.png" class="logo" alt="logo"></a>
 					</div>
 					<ul class="nav">
-						<li class="nav-item">
-							<span class="ti-menu" id="sidebarCollapse"></span>
-						</li>
-						<li class="nav-item">
-							<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
-						</li>
-						<li class="nav-item">
-							<a  data-toggle="modal" data-target=".proclinic-modal-lg">
-								<span class="ti-search"></span>
-							</a>
-							<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-								<div class="modal-dialog modal-lorvens">
-									<div class="modal-content proclinic-box-shadow2">
-										<div class="modal-header">
-											<h5 class="modal-title">Search Patient/Doctor:</h5>
-											<span class="ti-close" data-dismiss="modal" aria-label="Close">
-											</span>
-										</div>
-										<div class="modal-body">
-											<form>
-												<div class="form-group">
-													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
-													<button type="button" class="btn btn-lorvens proclinic-bg">
-														<span class="ti-location-arrow"></span> Search</button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-								<span class="ti-announcement"></span>
-							</a>
-							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
-								<h5>Notifications</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-money"></span> Patient payment done</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-time"></span>Patient Appointment booked</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-wheelchair"></span> New Patient Added</a>
-							</div>
-						</li>
+		
 						<li class="nav-item">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								<span class="ti-user"></span>
 							</a>
 							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
-								<h5>John Willing</h5>
-								<a class="dropdown-item" href="#">
-									<span class="ti-settings"></span> Settings</a>
-								<a class="dropdown-item" href="#">
-									<span class="ti-help-alt"></span> Help</a>
-								<a class="dropdown-item" href="#">
+								<h5><?php echo $_SESSION['username'] ;?>
+                                </h5>
+							
+								<a class="dropdown-item" href="login.php">
 									<span class="ti-power-off"></span> Logout</a>
 							</div>
 						</li>
@@ -224,23 +178,23 @@
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="patient-name">Patient Name</label>
-										<input type="text" class="form-control" placeholder="Patient name" name="patient-name" id="patient-name">
+										<input type="text" class="form-control" placeholder="Patient name" name="patient-name" id="patient-name" required> 
 									</div>
 									<div class="form-group col-md-6">
 										<label for="dob">Date Of Birth</label>
-										<input type="date" placeholder="Date of Birth" class="form-control" id="dob" name="dob">
+										<input type="date" placeholder="Date of Birth" class="form-control" id="dob" name="dob" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="age">ID</label>
-										<input type="text" placeholder="ID" class="form-control" id="id_number" name="id_number">
+										<input type="number" placeholder="4523..." class="form-control" id="id_number" name="id_number" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="phone">Phone</label>
-										<input type="text" placeholder="Phone" class="form-control" id="phone" name="phone">
+										<input type="tel" placeholder="123-425-2678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="phone" name="phone" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="email">Email</label>
-										<input type="email" placeholder="email" class="form-control" id="Email" name="Email">
+										<input type="email" placeholder="email@.." class="form-control" id="Email" name="Email" required>
 									</div>
 									<div class="form-group col-md-6">
 										<label for="gender">Gender</label>
@@ -254,10 +208,7 @@
 										<label for="exampleFormControlTextarea1">Address</label>
 										<textarea placeholder="Address" class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
 									</div>
-									<div class="form-group col-md-12">
-										<label for="file">File</label>
-										<input type="file" class="form-control" id="file">
-									</div>
+									
 																		
 									<div class="form-check col-md-12 mb-2">
 										<div class="text-left">
@@ -273,18 +224,7 @@
 								</div>
 							</form>
 							<!-- Alerts-->
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Successfully Done!</strong> Please add payment now
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
-							<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-									<span aria-hidden="true">×</span>
-								</button>
-							</div>
+							
 							<!-- /Alerts-->
 						</div>
 					</div>
